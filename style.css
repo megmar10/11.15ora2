@@ -1,0 +1,51 @@
+#fotartalom{
+    grid-area: fo;
+    border: double 2px black;
+    border-top-width: 0px;
+}
+#baltartalom{
+    grid-area: bal;
+}
+#jobbtartalom{
+    grid-area: jobb;
+}
+#bejelenkezes{
+    grid-area: be;
+}
+nav{
+    grid-area: me;
+}
+footer{
+    grid-area: os;
+}
+#keszetette{
+    grid-area: ke;
+    border-top: dashed black 1px;
+}
+
+#elerhetoseg{
+    grid-area: el;
+    border:1px black solid;
+}
+
+main{
+    display: grid;
+    /*grid-template-rows: 1fr 1fr 1fr 1fr 1fr;*/
+    grid-template-areas:
+    'me me fo be be'
+    'me me fo bal jobb'
+    'ke os el el el';
+}
+
+#bejelnkezes, #fotartalomb{
+    text-align: center;
+}
+#jobbtartalom, footer{
+    text-align: right;
+}
+
+main>*{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding: auto 10px;
+}
